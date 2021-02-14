@@ -1,0 +1,248 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                        <tr>
+                            <th>
+                            Тип изделия
+                                <td>
+                                    {{object.type}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Модель
+                                <td>
+                                    {{object.model}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Тип телевизора
+                                <td>
+                                    {{object.type_TV}}
+                                </td>
+                            </th>
+                        </tr>
+                    </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Экран
+                        <tr>
+                            <th>
+                            Диагональ экрана
+                                <td>
+                                    {{object.screen_diagonal}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Разрешение экрана
+                                <td>
+                                    {{object.screen_resolution}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Формат экрана
+                                <td>
+                                    {{object.screen_format}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Стандарт HDTV
+                                <td>
+                                    {{object.HDTV}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Параметры матрицы
+                        <tr>
+                            <th>
+                            Частота обновления экрана
+                                <td>
+                                    {{object.screen_refresh}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Угол обзора
+                                <td>
+                                    {{object.viewing_angle}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Приём сигнала
+                        <tr>
+                            <th>
+                            Цифровые тюнеры
+                                <td>
+                                    {{object.digital_tuner}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Телетекст
+                                <td>
+                                    {{object.teletext}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+
+                <th colspan="2" class="first">
+                    Звук
+                    <tr>
+                        <th>
+                        Мощность звука
+                            <td>
+                                {{object.power_sound}}
+                            </td>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                        Сабвуфер
+                            <td>
+                                {{object.subwoofer}}
+                            </td>
+                        </th>
+                    </tr>
+                </th>
+                <th colspan="2" class="first">
+                    Разъёмы и интерфейсы
+                    <tr>
+                        <th>
+                        Количество HDMI портов
+                            <td>
+                                {{object.number_HDMI_port}}
+                            </td>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                        Выход для наушников
+                            <td>
+                                {{object.headphone_output}}
+                            </td>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                        Количество USB портов
+                            <td>
+                                {{object.number_USB_port}}
+                            </td>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                        Bluetooth
+                            <td>
+                                {{object.bluetooth}}
+                            </td>
+                        </th>
+                    </tr>
+                </th>
+                    <th colspan="2" class="first">
+                        Крепление
+                        <tr>
+                            <th>
+                            Возможность крепления на стену
+                                <td>
+                                    {{object.wall_mounting}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Расположение подставки
+                                <td>
+                                    {{object.location_stand}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Толщина
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вес
+                                <td>
+                                    {{object.massa}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

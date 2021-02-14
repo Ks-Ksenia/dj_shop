@@ -1,0 +1,253 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{object.manufacture}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                            <tr>
+                                <th>
+                                Тип изделия
+                                    <td>
+                                        {{object.type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Модель
+                                    <td>
+                                        {{object.model}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Основные характеристики
+                        <tr>
+                            <th>
+                            Тип сушки
+                                <td>
+                                    {{object.dry_type}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Объём барабана
+                                <td>
+                                    {{object.volume}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Мах загрузка
+                                <td>
+                                    {{object.max_load}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вид управления
+                                <td>
+                                    {{object.control}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Мах загрузка
+                                <td>
+                                    {{object.max_load}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Дисплей
+                                <td>
+                                    {{object.display}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Класс энергопотребления
+                                <td>
+                                    {{object.class_energy}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Тепловой насос
+                                <td>
+                                    {{object.heat_pump}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Функции и параметры
+                        <tr>
+                            <th>
+                            Отсрочка старта
+                                <td>
+                                    {{object.postponing_start}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Продолжительность отсрочки
+                                <td>
+                                    {{object.load_postponing}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Определение влажности белья
+                                <td>
+                                    {{object.fault}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Общее количество программ
+                                <td>
+                                    {{object.program}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Хлопок
+                                <td>
+                                    {{object.cotton}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Синтетика
+                                <td>
+                                    {{object.synthetics}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Чувствительное бельё
+                                <td>
+                                    {{object.sensitive_lines}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Шерсть
+                                <td>
+                                    {{object.wool}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Безопасность
+                        <tr>
+                            <th>
+                            Блокировка от детей
+                                <td>
+                                    {{object.block_child}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Защита от перегрева
+                                <td>
+                                    {{object.overheating}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Уровень шума
+                                <td>
+                                    {{object.value_noice}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Глубина
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вес
+                                <td>
+                                    {{object.massa}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+
