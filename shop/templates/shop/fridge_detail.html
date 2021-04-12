@@ -1,0 +1,204 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                        <tr>
+                            <th>
+                            Тип изделия
+                                <td>
+                                    {{object.type}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Модель
+                                <td>
+                                    {{object.model}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Тип конструкции
+                                <td>
+                                    {{object.design_type}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Основные характеристики
+                        <tr>
+                            <th>
+                            Энергопотребление
+                                <td>
+                                    {{object.energy_consumption}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Мощность замораживания
+                                <td>
+                                    {{object.freezing_power}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Система холодильного отделения
+                                <td>
+                                    {{object.cold_storage_system}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Минимальная температура морозильной камеры/НТО
+                                <td>
+                                    {{object.min_temperature_freezer_NTO}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Уровень шума
+                                <td>
+                                    {{object.value_noize}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Объём
+                        <tr>
+                            <th>
+                            Общий полезный объём
+                                <td>
+                                    {{object.total_useful_volume}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Полезный объём холодильной камеры
+                                <td>
+                                    {{object.volume_refrigerator_compartment}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Полезный объём холодильной камеры/НТО
+                                <td>
+                                    {{object.volume_refrigerator_compartment_NTO}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Конструкция
+                        <tr>
+                            <th>
+                            Расположение морозильной камеры/НТО
+                                <td>
+                                    {{object.location_freezer_NTO}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Материал внешнего покрытия
+                                <td>
+                                    {{object.material_outer_covering}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Материал полок
+                                <td>
+                                    {{object.shelf_material}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Открытие дверей
+                                <td>
+                                    {{object.door_opening}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Глубина
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вес
+                                <td>
+                                    {{object.massa}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

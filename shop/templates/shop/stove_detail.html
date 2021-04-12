@@ -1,0 +1,227 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                        <tr>
+                            <th>
+                            Гарантия
+                                <td>
+                                    {{object.security}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Страна производитель
+                                <td>
+                                    {{object.country}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                        <tr>
+                            <th>
+                            Тип изделия
+                                <td>
+                                    {{object.type}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Модель
+                                <td>
+                                    {{object.model}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие характеристики
+                        <tr>
+                            <th>
+                            Общие количество комфорок
+                                <td>
+                                    {{object.total_number_burnets}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Объём духовки
+                                <td>
+                                    {{object.volume_oven}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальная потребляемая мощность
+                                <td>
+                                    {{object.max_power_consumption}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Напряжение питания
+                                <td>
+                                    {{object.supply_voltage}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Класс энергопотребления
+                                <td>
+                                    {{object.energy_consumption_class}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вид управления
+                                <td>
+                                    {{object.type_management}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Дисплей
+                                <td>
+                                    {{object.display}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Материал/покрытие корпуса
+                                <td>
+                                    {{object.housing_material_coating}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Духовка
+                        <tr>
+                            <th>
+                            Таймер
+                                <td>
+                                    {{object.timer}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Гриль
+                                <td>
+                                    {{object.grill}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальная температура
+                                <td>
+                                    {{object.max_temperature}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Подсветка духовки
+                                <td>
+                                    {{object.oven_light}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Варочная панель
+                        <tr>
+                            <th>
+                            Материал покрытия панели
+                                <td>
+                                    {{object.material_cover_panel}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Индукционные конфорки
+                                <td>
+                                    {{object.induction_burners}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Число двухконтурных конфорок
+                                <td>
+                                    {{object.number_double_circuit_burners}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Число трёхконтурных конфорок
+                                <td>
+                                    {{object.number_three_circuit_burners}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Глубина
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вес
+                                <td>
+                                    {{object.massa}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

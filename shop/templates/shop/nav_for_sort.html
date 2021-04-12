@@ -1,0 +1,212 @@
+{% block nav %}
+
+            <div class="nav">
+                <ul>
+                    <li class="catalog"><a>Каталог</a>
+                        <ul>
+                            <li class="hidden_topmenu"><a href = "{% url 'menu_url' url='menu_home_appliances_url' %}">
+                            Бытовая техника </a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href = "{% url 'submenu_url' 'kitchen_url' %}">Товары для кухни</a>
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href = "{% url 'fridge_url' %}">
+                                                Холодильники </a>
+
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'stove_url' %}">
+                                                Плиты </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'microwave_oven_url' %}">
+                                                Микровольновки </a>
+
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'kettle_url' %}">
+                                                Чайники </a>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href = "{% url 'submenu_url' url='house_url' %}">
+                                        Товары для дома </a>
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href = "{% url 'wash_machine_url' %}">
+                                                Стиральные машины </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'dry_machine_url' %}">
+                                                Сушильные машины </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'iron_url' %}">
+                                                Утюги </a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href = "{% url 'submenu_url' url='beautiful_health_url' %}">
+                                        Красота и здоровье </a>
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href = "{% url 'hairdryer_url' %}">
+                                                Фены </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'hair_clipper_url' %}">
+                                                Машинки для стрижки волос </a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="hidden_topmenu"><a href = "{% url 'menu_url' url='menu_smart_tablet_url' %}">
+                                Смартфоны и планшеты </a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href = "{% url 'submenu_url' url='smartphone_gadgets_url' %}">
+                                            Смартфоны и гаджеты
+                                        </a>
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href = "{% url 'smartphone_url' %}">
+                                                    Смартфоны
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'smart_watch_url' %}">
+                                                    Cмарт-часы и браслеты
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href = "{% url 'submenu_url' url='tablet_book_url' %}">
+                                            Планшеты, электронные книги
+                                        </a>
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href = "{% url 'tablet_url' %}">
+                                                    Планшеты
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'ebook_url' %}">
+                                                    Электронные книги
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="hidden_topmenu"><a href = "{% url 'menu_url' url='menu_TV_audio_url' %}">
+                                ТВ и аудио </a>
+                                <ul class="menu">
+                                    <li><a href = "{% url 'submenu_url' url='TB_accessories_url' %}">
+                                            Телевизоры и аксессуары
+                                        </a>
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href = "{% url 'TV_url' %}">
+                                                    Телевизоры
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'bracket_tv_url' %}">
+                                                    Кранштейны для телевизоров
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href = "{% url 'submenu_url' url='audio_url' %}">
+                                            Аудиотехника
+                                        </a>
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href = "{% url 'columns_url' %}">
+                                                    Колонки
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'headphones_url' %}">
+                                                    Наушники
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="hidden_topmenu">
+                                <a href = "{% url 'menu_url' url='menu_computer_url' %}">
+                                    Компьютеры
+                                </a>
+
+                                <ul class="menu">
+                                    <li>
+                                        <a href = "{% url 'submenu_url' url='computer_notebook_url' %}">
+                                            Компьютеры и ноутбуки
+                                        </a>
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href = "{% url 'notebook_url' %}">
+                                                    Ноутбуки
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'system_unit_url' %}">
+                                                    Системные блоки
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'server_url' %}">
+                                                    Серверы
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href = "{% url 'submenu_url' url='PC_accessories_url' %}">
+                                            Комплектующие ПК
+                                        </a>
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href = "{% url 'processor_url' %}">
+                                                    Процессоры
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'motherboard_url' %}">
+                                                    Материнская плата
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'video_card_url' %}">
+                                                    Видеокарты
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href = "{% url 'RAM_memory_url' %}">
+                                                    Оперативная память
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        {% endblock %}

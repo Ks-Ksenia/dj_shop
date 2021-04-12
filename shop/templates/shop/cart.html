@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container_cart">
+    {% if user.is_authenticated %}
+
+        <div class="cart_text">
+            <p> {% if not cart.products.count %}Ваша корзина пуста
+                {% else %} Товары в корзине {% endif %}
+            </p>
+        </div>
+
+        {% if messages %}
+            <div class="msg_text">
+
+                <p>{% for msg in messages %}
+                    {{msg}} <a href=""><img src="{% static 'images/msg_close.png' %}"></a>
+                    {% endfor %}
+                </p>
+
+            </div>
+        {% endif%}
+
+        <div class="cart_product">
+            {% if cart.products.count %}
+
+                {% for item in cart.products.all %}
+
+                <div class="item_cart_product">
+
+                    <div id="cart_img">
+                        <a href="{% url 'description_url' url=item.content_object.url category=item.content_object.category %}">
+                            <img src="/static{{item.content_object.image.url}}">
+                        </a>
+                    </div>
+
+                    <div class="cart_line2">
+                        <div id="cart_model">
+
+                            <a href="{% url 'description_url' url=item.content_object.url category=item.content_object.category %}">
+                                {{item.content_object.type}}
+                                {{ item.content_object.manufacture }} {{item.content_object.model}}
+                            </a>
+                        </div>
+
+
+                        <div id="form_quantity">
+                            <form action="{% url 'change_quantity_cart_url' url=item.content_object.url category=item.content_object.category %}"
+                                method="POST">
+
+                            {% csrf_token %}
+
+                            <input type="submit" name="add_quantity" value="+">
+                            <input type="number" name="quantity" min="1" value="{{item.quantity}}">
+                            <input type="submit" name="remove_quantity" value="-">
+                            </form>
+                        </div>
+
+                        <div id="product_del">
+                            <form action="{% url 'delete_product_from_cart_url' url=item.content_object.url category=item.content_object.category %}"
+                                method="get">
+                                <button type="submit">Удалить из корзины</button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="cart_price">
+                        <div id="product_price">
+                            <p>Цена за шт.</p>
+                            <span>{{item.content_object.price}} ₽</span>
+                        </div>
+
+                        <div id="total_price">
+                            <p>Общая цена</p>
+                            <span>{{item.final_price}} ₽</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+                <div class="cart_order">
+                    <div id="cart_result">
+                        <p>Итого: <span>{{ cart.final_price }}</span></p>
+
+                    </div>
+                    <div id="start_order">
+                        <form action="{% url 'register_order_url' %}" method="get">
+                            <button>Оформить заказ</button>
+                        </form>
+                    </div>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+        {% else %}
+            <p> Зарегистрируйтесь, чтобы увидеть корзину </p>
+
+    {% endif %}
+    </div>
+
+{% endblock %}

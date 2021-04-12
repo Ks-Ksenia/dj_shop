@@ -1,0 +1,199 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                        <tr>
+                            <th>
+                            Тип изделия
+                                <td>
+                                    {{object.type}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Модель
+                                <td>
+                                    {{object.model}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Платформа
+                        <tr>
+                            <th>
+                            Форм-фактор сервера
+                                <td>
+                                    {{object.form_factor}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Процессорные сокеты
+                                <td>
+                                    {{object.processor_socket}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальный возможный суммарный объём ОЗУ
+                                <td>
+                                    {{object.max_sum_RAM}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Интерфейс накопителей
+                                <td>
+                                    {{object.storage_interface}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Центральный процессор
+                        <tr>
+                            <th>
+                            Производитель процессоров
+                                <td>
+                                    {{object.manufacture_processor}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Модель процессоров
+                                <td>
+                                    {{object.model_processor}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Базовая частота
+                                <td>
+                                    {{object.base_frequency}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Подсистема памяти (ОЗУ)
+                        <tr>
+                            <th>
+                            Тип оперативной памяти
+                                <td>
+                                    {{object.type_RAM}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Объём установленной оперативной памяти
+                                <td>
+                                    {{object.volume_RAM}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Частота оперативной памяти
+                                <td>
+                                    {{object.frequency_RAM}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Хранилище данных
+                        <tr>
+                            <th>
+                            Тип установленных накопителей
+                                <td>
+                                    {{object.type_installed_drives}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Объём установленных накопителей
+                                <td>
+                                    {{object.storage_capacity}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Глубина
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вес
+                                <td>
+                                    {{object.massa}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

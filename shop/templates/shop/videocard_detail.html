@@ -1,0 +1,184 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                            <tr>
+                                <th>
+                                Тип изделия
+                                    <td>
+                                        {{object.type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Модель
+                                    <td>
+                                        {{object.model}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Год релиза
+                                    <td>
+                                        {{object.year}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Основные параметры
+                        <tr>
+                            <th>
+                            Линейка графических процессоров
+                                <td>
+                                    {{object.range_graphic_processor}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Графический процессор
+                                <td>
+                                    {{object.graphic_processor}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Спецификация видеопроцессора
+                        <tr>
+                            <th>
+                            Количество видеочипов
+                                <td>
+                                    {{object.videochip}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Штатная частота работы видеочипа(МГц)
+                                <td>
+                                    {{object.frequency_videochip}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальная температура процессора
+                                <td>
+                                    {{object.temperature_processor}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Поддержка трассировки лучей
+                                <td>
+                                    {{object.ray_tracing}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Спецификация видеопамяти
+                        <tr>
+                            <th>
+                            Объём видеопамяти
+                                <td>
+                                    {{object.volume_video_memory}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Тип памяти
+                                <td>
+                                    {{object.type_memory}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Эффективная частота памяти(МГц)
+                                <td>
+                                    {{object.frequency_memory}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Подключение
+                        <tr>
+                            <th>
+                            Интерфейс подключения
+                                <td>
+                                    {{object.interface_connection}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Версия PCI Express
+                                <td>
+                                    {{object.PCI_Express}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Длина видеокарты
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Толщина видеокарты
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

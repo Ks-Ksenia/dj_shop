@@ -1,0 +1,42 @@
+{% extends 'base_list.html' %}
+
+{% block nav %}
+<nav class="nav">
+
+    {% include 'shop/nav_for_sort.html' %}
+
+
+    <div class="container_sort">
+        <div>
+            <form action="{% url 'motherboard_url' %}"
+                            method="get">
+                {{form}}
+                <input type="submit" value="Показать">
+            </form>
+
+        </div>
+
+
+        <div>
+            <a href=" {% url 'motherboard_url' %}">Сбросить фильтры</a>
+        </div>
+    </div>
+
+
+</nav>
+
+{% endblock nav %}
+
+
+{% block specifications %}
+    <div class="specifications_list">
+        <a href="{% url 'description_url' url=product.url category=product.category %}">
+            <span>{{ product.type|title }}
+                {{ product.model|upper }}
+            </span>
+        </a>
+        <p>
+            {{product.form_factor}}, {{product.chipset}}, {{product.volume_memory}},
+            {{product.type_memory}}, {{product.speed_network_adapter}} </p>
+    </div>
+{% endblock specifications%}

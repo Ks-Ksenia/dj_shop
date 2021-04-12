@@ -1,0 +1,167 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                            <tr>
+                                <th>
+                                Тип изделия
+                                    <td>
+                                        {{object.type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Модель
+                                    <td>
+                                        {{object.model}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Игровые наушники
+                                    <td>
+                                        {{object.gaming_headphone}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Способ передачи сигнала
+                                    <td>
+                                        {{object.signal_transmission}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Тип конструкции
+                                    <td>
+                                        {{object.design_type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Формат звуковой схемы
+                                    <td>
+                                        {{object.format}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Функция гарнитуры
+                                    <td>
+                                        {{object.headset_function}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Микрофон
+                                    <td>
+                                        {{object.microphone}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Акустические характеристики
+                        <tr>
+                            <th>
+                            Тип акустического оформления
+                                <td>
+                                    {{object.type_acoustic_design}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Минимальная воспроизводимая частота
+                                <td>
+                                    {{object.min_reproducible_frequency}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальная воспроизводимая частота
+                                <td>
+                                    {{object.max_reproducible_frequency}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Проводное подключение
+                        <tr>
+                            <th>
+                            Тип проводного соединения
+                                <td>
+                                    {{object.type_wired_connection}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Отсоединяемый кабель
+                                <td>
+                                    {{object.detachable_cable}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Длина кабеля
+                                <td>
+                                    {{object.cable_length}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Форма штекера кабеля
+                                <td>
+                                    {{object.shape_cable_plug}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

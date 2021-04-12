@@ -1,0 +1,48 @@
+<nav>
+		<ul class="pagination">
+            {% if page_obj.has_previous %}
+                <li>
+                    <a href="?{{ordering_path}}&{{q}}page=1">&LT&LT</a>
+                </li>
+                <li>
+			        <a href="?{{ordering_path}}&{{q}}page={{ page_obj.previous_page_number }}">&LT</a>
+                </li>
+            {% else %}
+                <li class="disabled">
+                    <span>&LT&LT</span>
+                </li>
+                <li class="disabled">
+                    <span>&LT</span>
+                </li>
+            {% endif %}
+
+            {% for i in paginator.page_range %}
+                {% if page_obj.number == i %}
+                    <li class="page-item active">
+                        <a href="?{{ordering_path}}&{{q}}page={{ i }}">{{ i }}</a>
+                    </li>
+                {% elif i > page_obj.number|add:-2 and i < page_obj.number|add:2 %}
+                    <li class="page-item">
+                        <a href="?{{ordering_path}}&{{q}}page={{ i }}">{{ i }}</a>
+                    </li>
+                {% endif%}
+            {% endfor %}
+
+			{% if page_obj.has_next %}
+                <li>
+                    <a href="?{{ordering_path}}&{{q}}page={{ page_obj.next_page_number }}">&GT</a>
+                </li>
+                <li>
+                    <a href="?{{ordering_path}}&{{q}}page={{ paginator.num_pages }}">&GT&GT</a>
+                </li>
+            {% else %}
+                <li class="disabled">
+                    <span>&GT</span>
+                </li>
+                <li class="disabled">
+                    <span>&GT&GT</span>
+                </li>
+            {% endif %}
+
+		</ul>
+	</nav>

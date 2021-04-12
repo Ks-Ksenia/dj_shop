@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>shop</title>
+    <link rel="stylesheet" type="text/css" href={% static "index.css" %}>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/shop.png' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+<div class="wrapper">
+
+    <header>
+        <div class="header">
+            <div id="logo">
+                <a href="{% url 'main_menu_url' %}">
+                    <h1>ЭЛЕКТРО</h1>
+                </a>
+
+            </div>
+            <div class="right_header">
+                <div class="line1">
+                    <div id="address"><a href="#"><p>СПб, ул.Фрунзе, 5</p></a></div>
+                    <div id="phone">  8-800-77-07-777 </div>
+                    <div id="time_job"> Режим работы с 9 до 22 </div>
+                </div>
+                <div class="line2">
+                    <div id="search">
+                        <form action="{% url 'search' %}" method="get">
+                            <input name="q" value="" type="search" placeholder="поиск">
+                            <button type="search"> Поиск </button>
+                        </form>
+                    </div>
+                    <div id="cart">
+
+
+
+                            {% if user.is_authenticated %}
+                                <a href="{% url 'cart_url' %}">
+                                <span>
+                                    {% if cart.total_products %}
+                                        Kорзина: {{cart.total_products}}
+                                    {% else %}
+                                        Kорзина
+                                    {% endif %}
+                                </span>
+                            {% else %}
+                                <a href="{% url 'cart_anon_url' %}">
+                                <span>
+                                    {% if total_q == 0 %}
+                                        Kорзина
+                                    {% else %}
+                                        Kорзина: {{total_q}}
+                                    {% endif %}
+                                </span>
+                            {% endif%}
+                        </a>
+
+                    </div>
+                    <div id="login">
+                        {% if user.is_authenticated %}
+                        <p>{{ user.first_name }}</p>
+
+                            <a href="{% url 'logout' %}" >Выход</a>
+                        {% else %}
+
+                            <a href="{% url 'login' %}" >Вход</a>
+                        {% endif %}
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container">
+
+
+        {% block nav %}
+            <nav>
+                 {% include 'shop/nav.html' %}
+            </nav>
+        {% endblock nav %}
+
+        <div class="content">
+
+                {% block content %}
+
+                {% endblock %}
+
+        </div>
+
+    </div>
+
+    <footer>
+
+            <div class="footer">
+                <div>
+                    <p>Контакты</p>
+                    <p>Обратная связь</p>
+                </div>
+                <div>
+                    <p>Акции</p>
+                    <p>Форум</p>
+                </div>
+                <div>
+                    <p>Новости</p>
+                    <p>Вакансии</p>
+                </div>
+                <div>
+                    <p>Доставка</p>
+                    <p>Гарантии</p>
+                </div>
+
+
+            </div>
+
+    </footer>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                        <tr>
+                            <th>
+                            Гарантия
+                                <td>
+                                    {{object.security}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Страна производитель
+                                <td>
+                                    {{object.country}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                            <tr>
+                                <th>
+                                Тип устройства
+                                    <td>
+                                        {{object.type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Модель
+                                    <td>
+                                        {{object.model}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Форм-фактор корпуса
+                                    <td>
+                                        {{object.form_factor}}
+                                    </td>
+                                </th>
+                            </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Программное обеспечение
+                        <tr>
+                            <th>
+                            Операционная система
+                                <td>
+                                    {{object.OS}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Процессор
+                        <tr>
+                            <th>
+                            Модель процессора
+                                <td>
+                                    {{object.model_processor}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Количество ядер процессора
+                                <td>
+                                    {{object.core_processor}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Частота процессора
+                                <td>
+                                    {{object.frequency_processor}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Видео карта
+                        <tr>
+                            <th>
+                            Тип видео карты
+                                <td>
+                                    {{object.type_videocard}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Производитель видеочипа
+                                <td>
+                                    {{object.manufacture_chip}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Модель интегрированной видеокарты
+                                <td>
+                                    {{object.model_videocard}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Оперативная память
+                        <tr>
+                            <th>
+                            Тип оперативной памяти
+                                <td>
+                                    {{object.type_RAM}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Размер оперативной памяти
+                                <td>
+                                    {{object.size_RAM}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Накопитель данных
+                        <tr>
+                            <th>
+                            Суммарный объем жестких дисков (HDD)
+                                <td>
+                                    {{object.HDD}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Объем твердотельного накопителя (SSD)
+                                <td>
+                                    {{object.SSD}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Интерфейсы/разъёмы
+                        <tr>
+                            <th>
+                            Видео интерфейсы
+                                <td>
+                                    {{object.video_interface}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Интерфейсы переферии
+                                <td>
+                                    {{object.interface_periphery}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Длина
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

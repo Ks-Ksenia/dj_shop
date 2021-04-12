@@ -1,0 +1,270 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                        <tr>
+                            <th>
+                            Тип изделия
+                                <td>
+                                    {{object.type}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Модель
+                                <td>
+                                    {{object.model}}
+                                </td>
+                            </th>
+                        </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Дисплей
+                        <tr>
+                            <th>
+                            Диагональ дисплей
+                                <td>
+                                    {{object.display_diagonal}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Разрешение дисплей
+                                <td>
+                                    {{object.display_resolution}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Цветной экран
+                                <td>
+                                    {{object.screen_color}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Сенсорный дисплей
+                                <td>
+                                    {{object.display_sensor}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Форматы
+                        <tr>
+                            <th>
+                            Текстовые
+                                <td>
+                                    {{object.text}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Графические
+                                <td>
+                                    {{object.graphic}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Звуковые
+                                <td>
+                                    {{object.sound}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Видео
+                                <td>
+                                    {{object.video}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Система
+                        <tr>
+                            <th>
+                            Операционная система
+                                <td>
+                                    {{object.OS}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Оперативная память
+                                <td>
+                                    {{object.RAM}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Встроенная память
+                                <td>
+                                    {{object.internal_memory}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Слот для карты памяти
+                                <td>
+                                    {{object.SIM_cart}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Тип карты памяти
+                                <td>
+                                    {{object.type_SIM}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Беспроводная связь
+                        <tr>
+                            <th>
+                            Мобильная связь
+                                <td>
+                                    {{object.modile_communication}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Поддержка Wi-Fi
+                                <td>
+                                    {{object.WIFI}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Поддержка Bluetooth
+                                <td>
+                                    {{object.bluetooth}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Разъёмы и интерфейсы
+                        <tr>
+                            <th>
+                            Тип USB разъёма
+                                <td>
+                                    {{object.USB}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Аудиоразъёмы
+                                <td>
+                                    {{object.audio_jack}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Питание
+                        <tr>
+                            <th>
+                            Ёмкость аккумулятора
+                                <td>
+                                    {{object.battery_capacity}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Время работы
+                                <td>
+                                    {{object.time_job}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Толщина
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вес
+                                <td>
+                                    {{object.massa}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

@@ -1,0 +1,46 @@
+{% extends 'base_list.html' %}
+
+{% block nav %}
+<nav class="nav">
+
+    {% include 'shop/nav_for_sort.html' %}
+
+    <div class="container_sort">
+        <div>
+            <form action="{% url 'dry_machine_url' %}"
+                            method="get">
+                {{form}}
+                <input type="submit" value="Показать">
+            </form>
+
+        </div>
+
+
+        <div>
+            <a href=" {% url 'dry_machine_url' %}">Сбросить фильтры</a>
+        </div>
+    </div>
+</nav>
+
+{% endblock nav %}
+
+
+{% block specifications %}
+    <div class="specifications_list">
+        <a href="{% url 'description_url' url=product.url category=category %}">
+            <span>{{ product.type|title }} {{ product.manufacture|title }}
+                {{ product.model|upper }}
+            </span>
+        </a>
+        <p>{{product.max_load}}, сушка - {{product.dry_type}}, программ - {{product.program}},
+            <br>
+            {{product.width}} x {{product.height}} x {{product.depth}} </p>
+    </div>
+{% endblock specifications%}
+
+
+
+
+
+
+

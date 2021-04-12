@@ -1,0 +1,170 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                            <tr>
+                                <th>
+                                Тип изделия
+                                    <td>
+                                        {{object.type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Модель
+                                    <td>
+                                        {{object.model}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Основные характеристики
+                        <tr>
+                            <th>
+                            Объём
+                                <td>
+                                    {{object.volume}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Мощность
+                                <td>
+                                    {{object.power}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Материал корпуса
+                                <td>
+                                    {{object.body_material}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Напряжение питания
+                                <td>
+                                    {{object.voltage}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Комфорт
+                        <tr>
+                            <th>
+                            Температура нагрева воды
+                                <td>
+                                    {{object.temperature}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Подсветка
+                                <td>
+                                    {{object.light}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Длина сетевого шнура
+                                <td>
+                                    {{object.cord_length}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Автоотключение
+                                <td>
+                                    {{object.autopower}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Особенности крышки
+                                <td>
+                                    {{object.cover}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Глубина
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вес
+                                <td>
+                                    {{object.massa}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

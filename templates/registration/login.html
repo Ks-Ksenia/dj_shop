@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container_login">
+        <div id="login_text">
+           <h2>Войти или зарегистрироваться</h2>
+        </div>
+
+        {% if messages %}
+            <div class="msg_text">
+
+                <p>{% for msg in messages %}
+                        {{msg}}
+                    {% endfor %}
+                </p>
+
+            </div>
+        {% endif %}
+
+
+        <div class="login_form">
+            <form method="post">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button type="submit">Войти</button>
+
+            </form>
+            <div>
+                <form action="{% url 'singup_url' %}" method="get">
+                    <button type="submit"> Зарегистрироваться </button>
+                </form>
+            </div>
+            <div>
+                <form action="{% url 'password_reset' %}" method="get">
+                    <button type="submit"> Забыл пароль </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock content %}

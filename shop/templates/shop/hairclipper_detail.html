@@ -1,0 +1,189 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                        <tr>
+                            <th>
+                            Тип изделия
+                                <td>
+                                    {{object.type}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Профессиональная техника
+                                <td>
+                                    {{object.professional}}
+                                </td>
+                            </th>
+                        </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Основные характеристики
+                        <tr>
+                            <th>
+                            Тип двигателя
+                                <td>
+                                    {{object.type_engine}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимально потребляемая мощность
+                                <td>
+                                    {{object.max_power_consumption}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Количество насадок в комплекте
+                                <td>
+                                    {{object.number_attachments}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Материал лезвий
+                                <td>
+                                    {{object.blade_material}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Возможности, индикация
+                        <tr>
+                            <th>
+                            Влажная очистка
+                                <td>
+                                    {{object.wet_cleaning}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Насадка для бритья
+                                <td>
+                                    {{object.shaving_head}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Дисплей
+                                <td>
+                                    {{object.display}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Индикация заряда
+                                <td>
+                                    {{object.charge_indication}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Электропитание
+                        <tr>
+                            <th>
+                            Питание
+                                <td>
+                                    {{object.food}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Время зарядки
+                                <td>
+                                    {{object.charging_time}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Зарядки от USB
+                                <td>
+                                    {{object.charging_USB}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Глубина
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вес
+                                <td>
+                                    {{object.massa}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

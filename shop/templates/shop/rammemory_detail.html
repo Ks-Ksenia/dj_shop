@@ -1,0 +1,154 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                            <tr>
+                                <th>
+                                Тип изделия
+                                    <td>
+                                        {{object.type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Модель
+                                    <td>
+                                        {{object.model}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Код производителя
+                                    <td>
+                                        {{object.code}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Год релиза
+                                    <td>
+                                        {{object.year}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Объём и состав комплекта
+                        <tr>
+                            <th>
+                            Тип памяти
+                                <td>
+                                    {{object.type_memory}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Объем одного модуля памяти
+                                <td>
+                                    {{object.total_sum_memory}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Количсетво модулей в комплекте
+                                <td>
+                                    {{object.number_module}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Быстродействие
+                        <tr>
+                            <th>
+                            Тактовая частота
+                                <td>
+                                    {{object.frequency}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Пропускная способность
+                                <td>
+                                    {{object.bandwidth}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Тайминг
+                        <tr>
+                            <th>
+                            CAS Latency (CL)
+                                <td>
+                                    {{object.cl}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            RAS to CAS Delay (tRCD)
+                                <td>
+                                    {{object.trcd}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Row Precharge Delay (tRP)
+                                <td>
+                                    {{object.trp}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Activate to Precharge Delay (tRAS)
+                                <td>
+                                    {{object.tras}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

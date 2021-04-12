@@ -1,0 +1,192 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                            <tr>
+                                <th>
+                                Тип устройства
+                                    <td>
+                                        {{object.type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Модель
+                                    <td>
+                                        {{object.model}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Год релиза
+                                    <td>
+                                        {{object.year}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Форм-фактор
+                                    <td>
+                                        {{object.form_factor}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Сокет
+                                    <td>
+                                        {{object.socket}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Чипсет
+                                    <td>
+                                        {{object.chipset}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Память
+                        <tr>
+                            <th>
+                            Тип поддерживаемой памяти
+                                <td>
+                                    {{object.type_memory}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Количество слотов памяти
+                                <td>
+                                    {{object.slot_memory}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальная объём памяти
+                                <td>
+                                    {{object.volume_memory}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Слоты расширения
+                        <tr>
+                            <th>
+                            Версия PCI Express
+                                <td>
+                                    {{object.PCI_Express}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Количество слотов PCI
+                                <td>
+                                    {{object.slot_PCI}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Аудио
+                        <tr>
+                            <th>
+                            Звук
+                                <td>
+                                    {{object.sound}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Чипсет звукового адаптера
+                                <td>
+                                    {{object.chipset_sound}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Сеть
+                        <tr>
+                            <th>
+                            Чипсет сетевого адаптера
+                                <td>
+                                    {{object.network_adapter_chipset}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Скорость сетевого адаптера
+                                <td>
+                                    {{object.speed_network_adapter}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Питание
+                        <tr>
+                            <th>
+                            Основной разъём питания
+                                <td>
+                                    {{object.main_power_connector}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Разъём питания процессора
+                                <td>
+                                    {{object.processor_power_connector}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

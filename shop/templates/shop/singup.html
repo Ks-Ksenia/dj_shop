@@ -1,0 +1,20 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+    <div class="container_singup">
+        <div id="register_text">
+            <h2>Регистрация</h2>
+        </div>
+
+        <div class="register_form">
+            <form method="post">
+
+                {% csrf_token %}
+
+                {{ form.as_ul }}
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+
+    </div>
+{% endblock content %}

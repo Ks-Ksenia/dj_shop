@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container_detail">
+
+    <div class="general">
+        <div>
+            <img src="/static{{ object.image.url }}">
+        </div>
+
+        <div class="wrapper_detail">
+            <div>
+                <div class="name_detail">
+                    <h2>{{object.type|title}} </h2>
+                    <h2>{{object.manufacture}} {{object.model}}</h2>
+                </div>
+
+                <div class="link_detail">
+                        <a href="{% url 'description_url' url=object.url category=object.category %}"> Описание</a>
+                        <a href="{{ object.get_absolute_url}}"> Характеристики</a>
+                    <a href="{% url 'add_reviews_url' url=object.url category=object.category %}">
+                        Отзывы
+                        <span>
+                            {{review.count}}
+                        </span>
+
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="price_detail">
+                <span>Цена</span>
+                <p>{{object.price}} ₽</p>
+
+                <form
+                    {% if user.is_authenticated %}
+                        action="{% url 'add_product_to_cart_url'  url=object.url category=object.category %}"
+                    {% else %}
+                        action="{% url 'add_cart_anon_url'  url=object.url category=object.category %}"
+                    {% endif %}
+                    method="get">
+                    <button>Добавить в корзину</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="specifications_detail">
+        <div>
+            <form method="post" action="{% url 'add_reviews_url'  url=object.url category=object.category %}">
+                {% csrf_token %}
+
+                {{form.as_ul}}
+
+                <div>
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+
+            <div>
+                {% if review.count %}
+
+                    {% for comment in review.reverse %}
+                        <div class="comment">
+                            <span>{{comment.name}}</span>
+                            <p>{{comment.text}}</p>
+                            <span>{{comment.date}}</span>
+                        </div>
+                    {% endfor %}
+
+                {%else%}
+                    <p>Будь первым, оставь комментарий прямо сейчас!</p>
+                {% endif %}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,186 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                            <tr>
+                                <th>
+                                Тип изделия
+                                    <td>
+                                        {{object.type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Модель
+                                    <td>
+                                        {{object.model}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Формат системы
+                                    <td>
+                                        {{object.format}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Акустические характеристики
+                        <tr>
+                            <th>
+                            Мощность
+                                <td>
+                                    {{object.power}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Минимальная частота воспроизведения (Гц)
+                                <td>
+                                    {{object.min_playback_frequency}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальная частота воспроизведения (Гц)
+                                <td>
+                                    {{object.max_playback_frequency}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Соотношение сигнал/шум
+                                <td>
+                                    {{object.signal_noise}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Разъёмы и интерфесы
+                        <tr>
+                            <th>
+                            Тип проводного соединения
+                                <td>
+                                    {{object.type_wired_connection}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Беспроводное подключение
+                                <td>
+                                    {{object.wireless_connection}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Версия Bluetooth
+                                <td>
+                                    {{object.bluetooth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Интерфейс USB Type A(для флешки)
+                                <td>
+                                    {{object.interface_USB}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Аналоговые разъёмы
+                                <td>
+                                    {{object.analog_connector}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Фронтальные колонки
+                        <tr>
+                            <th>
+                            Мощность фронтальных колонок
+                                <td>
+                                    {{object.power_front_column}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Материал корпуса фронтальных колонок
+                                <td>
+                                    {{object.material_front_column}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Ширина фронтальных колонок
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота фронтальных колонок
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Глубина фронтальных колонок
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container_end_order">
+    <h2>Спасибо, за заказ!</h2>
+    <p>Номер вашего заказа: <span>{{number}}</span></p>
+    <a href="{% url 'index_url' %}">Вернуться на главную</a>
+</div>
+
+{% endblock content %}

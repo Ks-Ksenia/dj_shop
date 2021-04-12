@@ -1,0 +1,180 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                        <tr>
+                            <th>
+                            Тип изделия
+                                <td>
+                                    {{object.type}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Модель
+                                <td>
+                                    {{object.model}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Поколение процессоров
+                                <td>
+                                    {{object.generation_processor}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Код производителя
+                                <td>
+                                    {{object.code}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Год релиза
+                                <td>
+                                    {{object.year}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Сокет
+                                <td>
+                                    {{object.socket}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Ядро и архитектура
+                        <tr>
+                            <th>
+                            Ядро
+                                <td>
+                                    {{object.core}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Количество ядер
+                                <td>
+                                    {{object.number_core}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальное число потоков
+                                <td>
+                                    {{object.max_thread}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Частота
+                        <tr>
+                            <th>
+                            Базовая частота процессора (МГц)
+                                <td>
+                                    {{object.frequency_processor}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Параметры оперативной памяти
+                        <tr>
+                            <th>
+                            Тип памяти
+                                <td>
+                                    {{object.type_memory}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальная поддерживаемый объём памяти
+                                <td>
+                                    {{object.max_volume_memory}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Минимальная частота оперативной памяти
+                                <td>
+                                    {{object.min_frequency_RAM}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальная частота оперативной памяти
+                                <td>
+                                    {{object.max_frequency_RAM}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Тепловые характеристики
+                        <tr>
+                            <th>
+                            Тепловыделение(TDP)
+                                <td>
+                                    {{object.TDP}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальная температура процессора
+                                <td>
+                                    {{object.max_temperature}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

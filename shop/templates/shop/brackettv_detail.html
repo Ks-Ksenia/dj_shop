@@ -1,0 +1,153 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                        <tr>
+                            <th>
+                            Гарантия
+                                <td>
+                                    {{object.security}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                            <tr>
+                                <th>
+                                Тип изделия
+                                    <td>
+                                        {{object.type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Модель
+                                    <td>
+                                        {{object.model}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Тип кронштейна
+                                    <td>
+                                        {{object.type_TV}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Конструкция
+                        <tr>
+                            <th>
+                            Способ регулировки
+                                <td>
+                                    {{object.adjustment}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Место крепления кронштейна
+                                <td>
+                                    {{object.attachment_point}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Совместимость
+                        <tr>
+                            <th>
+                            Максимальная нагрузка
+                                <td>
+                                    {{object.max_load}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Стандарт размеров крипления
+                                <td>
+                                    {{object.standard_mounting_dimension}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Минимальная диагональ экрана
+                                <td>
+                                    {{object.max_diagonal_screen}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальная диагональ экрана
+                                <td>
+                                    {{object.min_diagonal_screen}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Регулировка
+                        <tr>
+                            <th>
+                            Угол поворота ответной части
+                                <td>
+                                    {{object.angle_rotation}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Угол наклона вверх
+                                <td>
+                                    {{object.tilt_angle_up}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Угол наклона вниз
+                                <td>
+                                    {{object.tilt_angle_down}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Минимальное расстояние от стены/потолка
+                                <td>
+                                    {{object.min_distance}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Максимальное расстояние от стены/потолка
+                                <td>
+                                    {{object.max_distance}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

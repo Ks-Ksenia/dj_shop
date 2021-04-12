@@ -1,0 +1,1518 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li{
+    list-style: none;
+}
+
+input:focus, select{
+    outline: none;
+}
+
+body{
+	line-height: 1;
+	display: flex;
+    justify-content: center;
+}
+
+/* base.html */
+
+body div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.wrapper{
+    background: white;
+}
+
+@media (max-width:1200px){
+    .wrapper{
+        max-width:970px;
+    }
+    #logo a h1{
+        font-size: calc(19px + (33 + 33 * 0.7) * ((100vw - 717px) / 1200));
+    }
+
+}
+@media (max-width:992px){
+    .wrapper{
+        max-width:750px;
+    }
+    #logo a h1{
+        font-size: calc(19px + (33 + 33 * 0.7) * ((100vw - 717px) / 1200));
+    }
+
+}
+@media (max-width:767px){
+    .wrapper{
+        max-width:none;
+    }
+    h1{
+        font-size: calc(19px + (33 + 33 * 0.7) * ((100vw - 320px) / 1200));
+    }
+}
+
+header{
+    margin: 1% 0 2% 0%;
+    width: 100%;
+    height: 150px;
+}
+.header{
+    flex-direction: row;
+    width: 100%;
+}
+
+#logo{
+    width: 22.5%;
+    height: 150px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+
+}
+
+#logo a h1{
+    padding: 50px 10px 0 10px;
+    width: auto;    /*250px;*/
+    height: 100px;
+    color: #6d068f;
+    font-size: 52px; /*322%*/
+    font-family: Arial, cursive;
+	font-style: italic;
+	font-weight: 700;
+
+}
+
+.right_header{
+    margin-left: 35px;
+    width: 74%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.line1{
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 75px;
+}
+
+.line1 div{
+    height: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+#address{
+    float: left;
+    margin-left: 15px;
+    width: 180px;
+
+}
+#address p{
+    color: black;
+}
+
+#phone{
+    margin: 0 20px 0 350px;
+    width:180px;
+}
+
+#time_job{
+    margin-right: 25px;
+    width:130px;
+}
+
+.line2{
+    flex-direction: row;
+    width: 100%;
+    height: 75px;
+}
+
+.line2 div{
+    margin: 30px 0 7px 0;
+    height: auto;
+}
+
+#search{
+    width: 50%;
+    height: 35px;
+    border-radius: 50px;
+    border: 2px solid #a6a5a0;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+}
+
+#search:hover{
+    border: 2px solid #6d068f;
+}
+
+#search:focus-within{
+    border: 2px solid #6d068f;
+    background: transparent;
+}
+
+#search form{
+    margin-left: 1%;
+}
+
+#search input{
+    padding-left: 10px;
+    width: 83%;
+    height: 28px;
+    border-radius: 50px;
+    color: black;
+}
+
+#search input:focus-within{
+    background: transparent;
+}
+
+[type='search']{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+
+#search button{
+    width: 60px;
+    height: 28px;
+    font-size: 16px;
+    background: transparent;
+}
+
+#search button:active{
+    padding: 0;
+}
+
+@keyframes gradient{
+    0% {
+    color: black;
+    background: radial-gradient(circle at center, #6d068f 0%, #fff 0%, #fff 100%);
+  }
+  25% {
+    background: radial-gradient(circle at center, #6d068f 24%, #fff 25%, #fff 100%);
+  }
+  50% {
+    background: radial-gradient(circle at center, #6d068f 49%, #fff 50%, #fff 100%);
+  }
+  75% {
+    background: radial-gradient(circle at center, #6d068f 74%, #fff 75%, #fff 100%);
+  }
+  100% {
+    color: #fff;
+    background: radial-gradient(circle at center, #6d068f 99%, #fff 100%, #fff 100%);
+  }
+}
+
+#cart{
+    margin-left: 50px;
+    width: 100px;
+    height: 36px;
+
+}
+
+#cart a{
+    width: 100px;
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 6%;
+    border: 2px solid #a6a5a0;
+    border-radius: 5px;
+    background: transparent;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+
+}
+
+
+#cart a:hover{
+    animation: gradient 300ms;
+    background: #6d068f;
+    color: white;
+    border: 2px solid #000;
+    -webkit-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+}
+
+
+#login{
+    flex-direction: row;
+    margin-left: 4px;
+    width: 250px;
+    height: 36px;
+}
+
+.msg_text{
+    font-size: 20px;
+    text-align: center;
+}
+
+.msg_text img{
+    width: 12px;
+}
+
+#login p{
+    margin: 0;
+    padding: 6px 15px 0 0;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+#login a{
+    width: 100px;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 2%;
+    border: 2px solid #a6a5a0;
+    border-radius: 5px;
+    background: transparent;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+}
+
+#login a:hover{
+    animation: gradient 300ms;
+    background: #6d068f;
+    border: 2px solid #000;
+    color: white;
+    -webkit-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+
+
+}
+
+
+.container{
+    flex-direction: row;
+    width: 100%;
+}
+
+nav{
+    width: 22.5%;
+    height: auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+
+}
+
+.topmenu{
+    margin: 10px 0 15px 4%;
+    width: 101%;
+}
+
+.topmenu > a{
+    display: flex;
+    padding: 4px;
+    width: 96%;
+    border-radius: 5px;
+    color: black;
+    font-size: 23px;
+
+}
+
+.topmenu > a:hover{
+    width: 91%;
+    color: white;
+    background: #6d068f;
+}
+
+.menu{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    width: 250px;
+    margin: -40px 0 0 265px;
+    background: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.topmenu:hover .menu{
+    visibility: visible;
+    opacity: 1;
+    padding: 15px 15px 0 15px;
+    z-index: 5;
+}
+
+.menu li{
+    padding-bottom: 5px;
+}
+
+.menu li > a{
+    display: flex;
+    padding: 3px;
+    width: 96%;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+}
+
+.menu li > a:hover{
+    color: #fff;
+    background: #6d068f;
+    border-radius: 5px;
+
+}
+
+.submenu li a{
+    padding-left: 20px;
+    width: auto;
+    color: black;
+    font-size: 18px;
+
+}
+
+.submenu li:hover a{
+    color: #fff;
+    background: #6d068f;
+}
+
+.content{
+    margin-left: 35px;
+    padding-left: 0px;
+    width: 74%;
+    height: auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 9px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 9px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 9px rgba(34, 60, 80, 0.2);
+}
+
+.container_pagination{
+    width: 100%;
+}
+
+.container_pagination nav{
+    margin: 3% 35%;
+    width: 30%;
+    height: 60px;
+}
+
+.pagination{
+	display: flex;
+	justify-content: center;
+    padding-top: 6%;
+    width: auto;
+	height: 100%;
+	cursor: pointer;
+
+}
+
+.pagination li{
+    width: 11%;
+    height: 30px;
+    margin: 0% 1%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.pagination li:hover{
+    background: #6d068f;
+}
+
+.pagination li:hover a{
+    color: white;
+}
+
+.page-item.active{
+    border: 3px solid #6d068f;
+}
+
+.pagination li a,
+.disabled span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 26px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+    width: 100%;
+}
+
+.footer{
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0%;
+    width: 99%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.footer p{
+    font-size: 20px;
+
+}
+
+/* cart.html */
+
+/*
+.message{
+    flex-direction: row;
+    margin: 0 9% 1% 9%;
+    width: 85%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px #6d068f69 inset;
+    -moz-box-shadow: 0px 5px 10px 2px #6d068f69 inset;
+    box-shadow: 0px 5px 10px 2px #6d068f69 inset; /* #09a40963
+}*/
+/*
+.message p{
+    font-size: 18px;
+    text-align: center;
+}
+
+.message button{
+    margin: 2.5% 0 0 2%;
+    width: 4%;
+    height: 36%;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.message button:hover{
+    border: 2px solid #6d068f;
+}
+
+.message button:active{
+    padding: 0;
+}
+*/
+.container_cart{
+    width: 97%;
+}
+
+.cart_product{
+    padding: 0 7% 3% 7%;
+}
+
+.cart_text{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.item_cart_product{
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-top: 2%;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+#cart_img{
+    max-width: 28%;
+    height: 180px;
+}
+
+#cart_img a{
+    max-width: 100%;
+
+}
+
+#cart_img img{
+    max-width: 150px;
+    max-height: 100%;
+
+}
+
+.cart_line2{
+    margin-left: 0%;
+    width: 53%;
+    height: 185px;
+}
+.cart_line2 div{
+    padding: 5px 15px;
+}
+
+#cart_model{
+    margin-bottom: 6%;
+
+}
+#cart_model a{
+    color: black;
+    font-size: 24px;
+}
+
+#form_quantity{
+    width: 27%;
+    margin-left: 65%;
+
+}
+
+[name="quantity"]{
+    width: 20px;
+    text-align: center;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+#product_del{
+    padding-top: 7%;
+
+}
+
+#product_del button{
+    width: 200px;
+    height: 35px;
+    font-size: 14px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background: transparent;
+
+}
+
+#product_del button:hover{
+    border: 2px solid #6d068f;
+    color: #6d068f;
+}
+
+#product_del button:active{
+    padding: 0;
+}
+
+.cart_price{
+    width: 20%;
+    height: auto;
+}
+
+#product_price{
+    margin: 0;
+    height: auto;
+
+}
+
+#product_price p{
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+#product_price span{
+    padding-top: 5px;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+
+#total_price{
+    margin-top: 33%;
+}
+
+#total_price p{
+    margin: 0;
+    font-size: 18px;
+        text-align: center;
+}
+#total_price span{
+    padding-top: 5px;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+
+#cart_result p{
+    font-size: 24px;
+}
+
+#start_order button{
+    width: 200px;
+    height: 35px;
+    font-size: 14px;
+    border: 2px solid #a6a5a0;
+    border-radius: 5px;
+    background: transparent;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+
+}
+
+#start_order button:hover{
+    animation: gradient 300ms;
+    background: #6d068f;
+    color: white;
+    border: 2px solid #000;
+    -webkit-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+
+}
+
+#start_order button:active{
+    padding: 0;
+}
+
+/* cart_anon.html */
+
+.anon{
+    margin-left: 5%;
+    width: 90%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.anon h2{
+    text-align: center;
+}
+
+/* singup.html */
+
+.container_singup{
+    width: 96%;
+    margin: 0 2% 2% 2%;
+}
+
+#register_text{
+    width: 100%;
+}
+
+#register_text h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+.register_form{
+    margin: 0 2%;
+    width: 96%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.register_form form{
+    padding: 3%;
+}
+
+.register_form form li{
+    padding-bottom: 10px;
+}
+
+.register_form form li label{
+    font-size: 20px;
+}
+
+.register_form form input{
+    padding-left: 7px;
+    font-size: 16px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.register_form button{
+    margin: 2%  0 0 37%;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #a6a5a0;
+    border-radius: 5px;
+    background: transparent;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+
+}
+
+.register_form button:hover{
+    animation: gradient 300ms;
+    background: #6d068f;
+    color: white;
+    border: 2px solid #000;
+    -webkit-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+
+}
+
+.register_form button:active{
+    padding: 0;
+}
+
+/* login.html */
+
+.container_login{
+    width: 96%;
+    margin: 0 2% 2% 2%
+}
+
+#login_text{
+    width: 100%;
+}
+
+#login_text h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+#login_text p{
+    font-size: 24px;
+    text-align: center;
+}
+
+.login_form{
+    margin: 0 34%;
+    width: 30%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.login_form form{
+    padding: 3% 12%;
+}
+
+.login_form form p{
+    padding-bottom: 10px;
+
+}
+
+.login_form form p label{
+    font-size: 20px;
+}
+
+.login_form form input{
+    padding-left: 4%;
+    width: 94%;
+    font-size: 16px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.login_form button{
+    margin: 3%  0%;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #a6a5a0;
+    border-radius: 5px;
+    background: transparent;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+
+}
+
+.login_form button:hover{
+    animation: gradient 300ms;
+    background: #6d068f;
+    color: white;
+    border: 2px solid #000;
+    -webkit-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+
+}
+
+.login_form button:active{
+    padding: 0;
+}
+
+
+/* mainmenu_menu.html */
+
+.container_menu{
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 2%;
+    width: 96%;
+}
+
+.container_menu div{
+    margin: 1% 4%;
+    justify-content: space-between;
+    width: 42%;
+}
+
+.container_menu div:hover{
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+
+}
+
+.container_menu p{
+    font-size: 24px;
+    text-align: center;
+
+}
+
+.container_menu img{
+    max-width: 250px;
+    max-height: 250px;
+    padding: 0 15%;
+
+}
+
+/* order_registration.html */
+
+.container_start_order{
+    margin: 0 2%;
+    width: 96%;
+    height: 100%;
+}
+
+#start_order_text h2{
+    text-align: center;
+}
+
+.order_form{
+    margin: 0 3% 3% 3%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.order_form li{
+    padding-bottom: 10px;
+}
+
+.order_form li:nth-child(5){
+    padding-bottom: 0px;
+}
+
+.order_form li:nth-child(5) ul{
+    padding-top: 6px;
+}
+
+.order_form form li label{
+    font-size: 20px;
+}
+
+.order_form form{
+    padding: 3%
+}
+
+.order_form form input{
+    padding-left: 7px;
+    font-size: 16px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+
+}
+
+.order_form form select{
+    padding-left: 0.5%;
+    padding-right: 2%;
+    width: 17%;
+    font-size: 16px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+
+}
+
+.order_form form textarea{
+    padding: 2%;
+    font-size: 16px;
+    font-family: fantasy;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.order_form button{
+    margin: 2%  0 0 37%;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #a6a5a0;
+    border-radius: 5px;
+    background: transparent;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+
+}
+
+.order_form button:hover{
+    animation: gradient 300ms;
+    background: #6d068f;
+    color: white;
+    border: 2px solid #000;
+    -webkit-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+
+}
+
+/* order_end.html */
+
+.container_end_order{
+    align-items: center;
+}
+
+.container_end_order h2{
+    text-align: center;
+}
+
+.container_end_order p{
+    padding: 3%;
+    width: 50%;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.container_end_order p span{
+    font-weight: bold;
+}
+
+.container_end_order a{
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+
+
+/* base_list.html */
+
+.nav{
+    position: relative;
+    z-index: 10;
+    box-shadow: none;
+}
+
+.catalog{
+    height: 40px;
+
+}
+
+.catalog > a{
+    display: block;
+    padding: 5px 0;
+    width: 98%;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #a6a5a0;
+    border-radius: 5px;
+    background: transparent;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+}
+
+.catalog > a:hover{
+    animation: gradient 300ms;
+    background: #6d068f;
+    color: white;
+    border: 2px solid #000;
+    -webkit-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+
+}
+
+.catalog > ul{
+    width: 0;
+    height: 0;
+    background: white;
+}
+
+.hidden_topmenu{
+    visibility: hidden;
+}
+
+.catalog:hover > ul{
+    padding: 2%;
+    width: 97%;
+    height: auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.catalog:hover ul .hidden_topmenu{
+    visibility: visible;
+}
+
+
+.hidden_topmenu{
+    margin: 5px 0 15px 3%;
+    width: 103%;
+}
+
+.hidden_topmenu > a{
+    display: flex;
+    margin-left: -6px;
+    padding: 4px;
+    width: 93%;
+    border-radius: 5px;
+    color: black;
+    font-size: 23px;
+
+}
+
+.hidden_topmenu > a:hover{
+    color: white;
+    background: #6d068f;
+}
+
+.hidden_topmenu:hover .menu{
+    visibility: visible;
+    opacity: 1;
+    padding: 15px 15px 0 15px;
+}
+
+
+.product_list{
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2% 4% 0 4%;
+    padding: 0% 3%;
+    height: 200px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.product_list img{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.specifications_list{
+    margin: 0 4%;
+}
+
+.specifications_list span{
+    font-size: 20px;
+}
+
+.specifications_list p{
+    margin-top: 11%;
+    font-size: 18px;
+}
+
+.price_list span{
+    font-size: 20px;
+    text-align: center;
+}
+
+.price_list p{
+    font-size: 24px;
+    text-align: center;
+}
+
+.price_list button{
+    width: 100px;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #a6a5a0;
+    border-radius: 5px;
+    background: transparent;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+
+}
+
+.price_list button:hover{
+    animation: gradient 300ms;
+    background: #6d068f;
+    color: white;
+    border: 2px solid #000;
+    -webkit-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+
+}
+
+.price_list button:active{
+    padding: 0;
+}
+
+#notsearch{
+    margin-left: 5%;
+    width: 90%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+#notsearch h2{
+    text-align: center;
+}
+
+/* base_detail.html */
+
+.container_detail{
+    margin: 0 3% 3% 3%;
+    width: 94%;
+
+}
+
+.general{
+    flex-direction: row;
+}
+
+.container_detail img{
+    margin: 15px 0;
+    max-width: 300px;
+}
+
+.wrapper_detail{
+    flex-direction: row;
+    width: 80%;
+}
+
+.wrapper_detail > div:nth-child(1){
+    width: 72%;
+}
+
+.name_detail{
+    margin-right: 3%;
+}
+
+.link_detail{
+    flex-direction: row;
+    margin-top: 20%;
+    padding-right: 3%;
+}
+
+.link_detail a{
+    margin: 1%;
+    padding: 2%;
+    width: auto;
+    font-size: 20px;
+}
+
+.link_detail a:hover{
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.price_detail{
+    padding-bottom: 5%;
+    width: 25%;
+}
+.price_detail span{
+    font-size: 24px;
+    text-align: center;
+}
+
+.price_detail p{
+    font-size: 34px;
+    text-align: center;
+}
+
+.price_detail button{
+    width: 100%;
+    padding: 4% 0;
+    font-size: 16px;
+    border: 2px solid #a6a5a0;
+    border-radius: 5px;
+    background: transparent;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+
+}
+
+.price_detail button:hover{
+    animation: gradient 300ms;
+    background: #6d068f;
+    color: white;
+    border: 2px solid #000;
+    -webkit-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+
+}
+
+.specifications_detail{
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.specifications_detail p{
+    padding: 2%;
+    font-size: 18px;
+    line-height: 1.2;
+
+}
+
+/* specifications.html */
+
+
+
+
+/* review.html */
+
+.specifications_detail > div{
+    margin: 3%;
+
+}
+
+.specifications_detail li{
+    padding-bottom: 10px;
+}
+
+.specifications_detail form li label{
+    font-size: 20px;
+}
+
+.specifications_detail form li #id_name{
+    margin-left: 2%;
+}
+
+.specifications_detail form input{
+    padding-left: 7px;
+    font-size: 16px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+
+}
+
+.specifications_detail form textarea{
+    padding: 2%;
+    width: 87%;
+    font-size: 16px;
+    font-family: fantasy;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.specifications_detail form button{
+    margin: 2% 0;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #a6a5a0;
+    border-radius: 5px;
+    background: transparent;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+
+}
+
+.specifications_detail form button:hover{
+    animation: gradient 300ms;
+    background: #6d068f;
+    color: white;
+    border: 2px solid #000;
+    -webkit-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+
+}
+
+.comment{
+    margin-bottom: 2%;
+    padding: 2%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+}
+
+.comment span,
+.comment p{
+    padding: 0;
+    font-size: 18px;
+}
+
+/* <имя модели>_list.html */
+
+.container_sort {
+    height: auto;
+    padding: 5% 5%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(12, 10, 13, 0.2) inset;
+
+}
+
+.container_sort div{
+    z-index: 0;
+}
+
+.container_sort form{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.container_sort select{
+    height: 25px;
+    border-radius: 6px;
+}
+
+.container_sort label{
+    margin: 3%;
+    display: flex;
+
+}
+
+.container_sort input[type='text']{
+    padding: 5px;
+    height: 13px;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.container_sort input[type='checkbox']{
+    width: 25px;
+}
+
+.container_sort input[type='submit']{
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #a6a5a0;
+    border-radius: 5px;
+    background: transparent;
+    -webkit-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    -moz-box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+    box-shadow: 0px -3px 13px -6px rgba(0, 0, 0, 0.76) inset;
+}
+
+.container_sort input[type='submit']:hover{
+    animation: gradient 300ms;
+    background: #6d068f;
+    color: white;
+    border: 2px solid #6d068f;
+    -webkit-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0px -3px 17px -6px rgba(255, 255, 255, 1) inset;
+}
+
+
+.container_sort a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.container_sort a:hover{
+        border: 2px solid #6d068f;
+        color: #6d068f
+}
+
+/* <имя модели>_detail.html */
+
+caption{
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+table{
+    width: 90%;
+    height: 1100px;
+    margin: 10px 5% 20px 5%;
+}
+
+table th{
+    text-align: start;
+    font-size: 18px;
+
+}
+
+table .first{
+    font-weight: 700;
+    border-bottom: 1px solid black;
+}
+
+
+table tbody tr th{
+    font-weight: 500;
+}
+
+table td{
+    font-size: 18px;
+    width: 46%;
+}
+
+#er_404 p{
+    text-align: center;
+    font-size: 26px;
+}
+
+
+

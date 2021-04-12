@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container_list">
+        {% if object_list %}
+
+            {% for product in object_list %}
+
+                <div class="product_list">
+                    <div class="product_img">
+                        <a href="{% url 'description_url' url=product.url category=product.category %}">
+                            <img src="/static{{ product.image.url }}">
+                        </a>
+                    </div>
+
+                    {% block specifications %}
+
+                        <div class="specifications_list">
+                            <a href="{% url 'description_url' url=product.url category=product.category %}">
+                                <span>{{ product.type|title }} {{ product.model|title }}</span>
+                            </a>
+
+                        </div>
+                    {% endblock specifications %}
+
+                    <div class="price_list">
+                        <span>Цена</span>
+                        <p>{{product.price}} ₽</p>
+
+                        <form
+                            {% if user.is_authenticated %}
+                                action="{% url 'add_product_to_cart_url'  url=product.url category=product.category %}"
+                            {% else %}
+                                action="{% url 'add_cart_anon_url'  url=product.url category=product.category %}"
+                            {% endif %}
+
+                            method="get">
+                            <button type="submit">Купить</button>
+                        </form>
+                    </div>
+
+                </div>
+            {% endfor %}
+
+        <div class="container_pagination">
+            {% include 'shop/pagination.html' %}
+        </div>
+
+        {% else %}
+            <div id="notsearch">
+                <h2>Результатов не найдено</h2>
+            </div>
+
+        {% endif %}
+
+    </div>
+
+{% endblock content%}

@@ -1,0 +1,189 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                            <tr>
+                                <th>
+                                Тип изделия
+                                    <td>
+                                        {{object.type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Модель
+                                    <td>
+                                        {{object.model}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Профессиональный фен
+                                    <td>
+                                        {{object.professional}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Основные характеристики
+                        <tr>
+                            <th>
+                            Мощность сушки
+                                <td>
+                                    {{object.dry_capacity}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Количество температурных режимов
+                                <td>
+                                    {{object.temperature_regime}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Количество скоростей воздушного потока
+                                <td>
+                                    {{object.airspeed}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Длина сетевого шнура
+                                <td>
+                                    {{object.cord_lenght}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Функции и возможности
+                        <tr>
+                            <th>
+                            Подача холодного воздуха
+                                <td>
+                                    {{object.cold_air_supply}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Ионизация
+                                <td>
+                                    {{object.ionization}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Защита от перегрева
+                                <td>
+                                    {{object.overheating_protection}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Конструкция
+                        <tr>
+                            <th>
+                            Вращение шнура
+                                <td>
+                                    {{object.rotation_cord}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Складная ручка
+                                <td>
+                                    {{object.folding_handle}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Петля для подвешивания
+                                <td>
+                                    {{object.loop_hanging}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Глубина
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вес
+                                <td>
+                                    {{object.massa}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

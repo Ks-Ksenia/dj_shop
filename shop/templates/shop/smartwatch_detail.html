@@ -1,0 +1,239 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                        <tr>
+                            <th>
+                            Тип изделия
+                                <td>
+                                    {{object.type}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Модель
+                                <td>
+                                    {{object.model}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Совместимость с операционными системами
+                                <td>
+                                    {{object.compatible_devices}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Тип управления
+                                <td>
+                                    {{object.type_control}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Дисплей
+                        <tr>
+                            <th>
+                            Наличие дисплея
+                                <td>
+                                    {{object.display_availability}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Тип циферблата
+                                <td>
+                                    {{object.dial_type}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Сенсорный дисплей
+                                <td>
+                                    {{object.sensor_display}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Диагональ
+                                <td>
+                                    {{object.diagonal}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Форм-факто дисплея
+                                <td>
+                                    {{object.display_form_factor}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Корпус и ремешок
+                        <tr>
+                            <th>
+                            Степень защиты
+                                <td>
+                                    {{object.display_form_factor}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Материал ремешка
+                                <td>
+                                    {{object.band_material}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Размер ремешка
+                                <td>
+                                    {{object.size_strap}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Связь и коммутация
+                        <tr>
+                            <th>
+                            Беспроводная связь
+                                <td>
+                                    {{object.wireless_communication}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Версия Bluetooth
+                                <td>
+                                    {{object.bluetooth_version}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            GPS
+                                <td>
+                                    {{object.gps}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Слот для SIM-карты
+                                <td>
+                                    {{object.sim_cart}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Питание
+                        <tr>
+                            <th>
+                            Тип питания
+                                <td>
+                                    {{object.type_food}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Ёмкость аккумулятора
+                                <td>
+                                    {{object.battery_capacity}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Время работы
+                                <td>
+                                    {{object.time_job}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Толщина
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вес
+                                <td>
+                                    {{object.massa}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

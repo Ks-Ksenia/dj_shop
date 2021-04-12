@@ -1,0 +1,205 @@
+{% extends 'base_detail.html' %}
+
+{% block specifications %}
+        <div class="specifications_detail">
+            <table>
+                <caption>Характеристики {{object.type}} {{ object.model}}</caption>
+                <tr>
+                    <th colspan="2" class="first">
+                        Заводские данные
+                            <tr>
+                                <th>
+                                Гарантия
+                                    <td>
+                                        {{object.security}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Страна производитель
+                                    <td>
+                                        {{object.country}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Общие параметры
+                            <tr>
+                                <th>
+                                Тип изделия
+                                    <td>
+                                        {{object.type}}
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                Модель
+                                    <td>
+                                        {{object.model}}
+                                    </td>
+                                </th>
+                            </tr>
+
+                    </th>
+                    <th colspan="2" class="first">
+                        Основные характеристики
+                        <tr>
+                            <th>
+                            Мощность микроволн
+                                <td>
+                                    {{object.power_microwaves}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Энергопотребление
+                                <td>
+                                    {{object.energy_consumption}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Внутренний объём
+                                <td>
+                                    {{object.internal_volume}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Поворотный стол
+                                <td>
+                                    {{object.rotary_table}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Диаметр поддона
+                                <td>
+                                    {{object.diameter_pan}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Внутреннее покрытие камеры
+                                <td>
+                                    {{object.inner_coating_camera}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Режимы и функции
+                        <tr>
+                            <th>
+                            Автоматические программы приготовления
+                                <td>
+                                    {{object.programs}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Отключение звукового сигнала
+                                <td>
+                                    {{object.beep}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Отсрочка старта
+                                <td>
+                                    {{object.start}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Панель управления
+                        <tr>
+                            <th>
+                            Вид управления
+                                <td>
+                                    {{object.type_management}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Блокировка от детей
+                                <td>
+                                    {{object.block_child}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Дисплей
+                                <td>
+                                    {{object.display}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Таймер
+                                <td>
+                                    {{object.timer}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                    <th colspan="2" class="first">
+                        Габариты
+                        <tr>
+                            <th>
+                            Ширина
+                                <td>
+                                    {{object.width}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Высота
+                                <td>
+                                    {{object.height}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Глубина
+                                <td>
+                                    {{object.depth}}
+                                </td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                            Вес
+                                <td>
+                                    {{object.massa}}
+                                </td>
+                            </th>
+                        </tr>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+{% endblock specifications %}
+
+
+
+

@@ -1,0 +1,43 @@
+{% extends 'base_list.html' %}
+
+{% block nav %}
+<nav class="nav">
+
+    {% include 'shop/nav_for_sort.html' %}
+
+
+    <div class="container_sort">
+        <div>
+            <form action="{% url 'RAM_memory_url' %}"
+                            method="get">
+                {{form}}
+                <input type="submit" value="Показать">
+            </form>
+
+        </div>
+
+
+        <div>
+            <a href=" {% url 'RAM_memory_url' %}">Сбросить фильтры</a>
+        </div>
+    </div>
+
+
+</nav>
+
+{% endblock nav %}
+
+
+{% block specifications %}
+    <div class="specifications_list">
+        <a href="{% url 'description_url' url=product.url category=product.category %}">
+            <span>{{ product.type|title }}
+                {{ product.model|upper }}
+            </span>
+        </a>
+        <p>
+            гарантия - {{product.security}}, {{product.type_memory}}, {{product.total_sum_memory}},
+            {{product.frequency}}, {{product.bandwidth}}
+        </p>
+    </div>
+{% endblock specifications%}

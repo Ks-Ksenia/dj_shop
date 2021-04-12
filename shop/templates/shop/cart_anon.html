@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="cart_text">
+            <p> {% if not cart %}Ваша корзина пуста
+                {% else %} Товары в корзине {% endif %}
+            </p>
+    </div>
+
+{% if cart %}
+        {% if messages %}
+            <div class="msg_text">
+
+                <p>{% for msg in messages %}
+                        {{msg}} <a href=""><img src="{% static 'images/msg_close.png' %}"></a>
+                    {% endfor %}
+                </p>
+
+            </div>
+        {% endif%}
+
+        <div class="cart_product">
+            {% for product in products %}
+
+                <div class="item_cart_product">
+
+                    <div id="cart_img">
+                        <a href="{% url 'description_url' url=product.url category=product.category %}">
+                            <img src="/static{{product.image.url}}">
+                        </a>
+                    </div>
+
+                    <div class="cart_line2">
+                        <div id="cart_model">
+
+                            <a href="{% url 'description_url' url=product.url category=product.category %}">
+                                {{product.type}}
+                                {{ product.manufacture }} {{product.model}}
+                            </a>
+                        </div>
+
+
+                        <div id="form_quantity">
+                            <form action="{% url 'quantity_cart_anon_url' url=product.url category=product.category %}"
+                                method="POST">
+
+                            {% csrf_token %}
+
+                            <input type="submit" name="add_quantity" value="+">
+                            <input type="number" name="quantity" min="1"
+                                   {% for i in cart.values %}
+                                        {% if i.url == product.url%}
+
+                                        value="{{i.quantity}}">
+                                    {% endif %}
+
+                                {% endfor %}
+
+                            <input type="submit" name="remove_quantity" value="-">
+                            </form>
+                        </div>
+
+                        <div id="product_del">
+                            <form action="{% url 'del_cart_anon_url' url=product.url category=product.category %}"
+                                method="get">
+                                <button type="submit">Удалить из корзины</button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="cart_price">
+                        <div id="product_price">
+                            <p>Цена за шт.</p>
+                            <span>{{product.price}} ₽</span>
+                        </div>
+
+                        <div id="total_price">
+                            <p>Общая цена</p>
+
+                            {% for i in cart.values %}
+                                {% if i.url == product.url%}
+
+                            <span> {{i.final_price}}₽</span>
+
+                                {% endif %}
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+                <div class="cart_order">
+                    <div id="cart_result">
+                        <p>Итого: <span>{{ total_price }}</span></p>
+
+                    </div>
+                    <div id="start_order">
+                        <form action="{% url 'register_order_url' %}" method="get">
+                            <button>Оформить заказ</button>
+                        </form>
+                    </div>
+
+                </div>
+        </div>
+
+{% endif %}
+
+{% endblock content %}
