@@ -3,7 +3,7 @@
 {% block content %}
     <div class="container_menu">
 
-        {% for point_menu in menu.related_submenu.all %}
+        {% for point_menu in menu %}
 
             <div>
                 <a href= "{% url point_menu.url  %}"><p>{{ point_menu.title }} </p></a>

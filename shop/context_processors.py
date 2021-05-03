@@ -1,5 +1,7 @@
-from .models import MainMenu, Menu, SubMenu, Cart, Customer
+from django.core.exceptions import ObjectDoesNotExist
 from django.conf import settings
+
+from .models import Cart, Customer
 
 
 def context_processors(request):
@@ -7,9 +9,6 @@ def context_processors(request):
     q = request.session.get('q', 0)
 
     context = {
-        # 'main_menu_context': MainMenu.objects.all(),
-        # 'menu_context': Menu.objects.all(),
-        # 'submenu_context': SubMenu.objects.all(),
         'cart': cart,
         'total_q': q
     }
@@ -19,7 +18,7 @@ def context_processors(request):
 
         try:
             cart = Cart.objects.get(customer=customer)
-        except:
+        except ObjectDoesNotExist:
             context
         else:
             context['cart'] = cart

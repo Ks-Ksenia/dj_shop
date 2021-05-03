@@ -3,7 +3,7 @@ from itertools import chain
 
 from django.db import transaction
 from django.db.models import Q
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
 from django.views.generic.base import View
 from django.views.generic import ListView, DetailView, CreateView
 from django.http import HttpResponseRedirect
@@ -14,13 +14,6 @@ from .models import *
 from .forms import *
 from .services import *
 from .urls import *
-
-
-# from django.conf import settings
-# from django.core.mail import send_mail
-
-# send_mail('Тема', 'Тело письма', settings.EMAIL_HOST_USER, ['demag74@mail.ru'])
-
 
 
 class index(View):
@@ -121,62 +114,34 @@ class Description(View):
         return render(request, 'shop/description.html', {'object': product})
 
 
-class SingUp(CreateView):
+class SignUp(CreateView):
     form_class = RegisterForm
     success_url = reverse_lazy('login')
-    template_name = 'shop/singup.html'
+    template_name = 'shop/signup.html'
 
 
 class MainMenuList(ListView):
     model = MainMenu
-    template_name_suffix = '_menu'
+    template_name = 'shop/menu.html'
 
 
 class MenuView(View):
-    def __init__(self):
-        self.URL_LIST = (
-            'menu_home_appliances_url',
-            'menu_smart_tablet_url',
-            'menu_TV_audio_url',
-            'menu_computer_url'
-
-        )
 
     def get(self, request, url):
-        url = url
-        menu = Menu.objects.all()
-        if url in self.URL_LIST:
-            main_menu = MainMenu.objects.get(url=url)
-        else:
-            return HttpResponseRedirect('/shop/404.html')
+        main_menu = get_object_or_404(MainMenu, url=url)
+        menu = get_list_or_404(Menu, category=main_menu.id)
 
-        return render(request, 'shop/menu_menu.html', {'main_menu': main_menu, 'menu': menu})
+        return render(request, 'shop/menu.html', {'object_list': menu})
 
 
 class SubMenuView(View):
 
-    def __init__(self):
-        self.URL_LIST = (
-            'kitchen_url',
-            'house_url',
-            'beautiful_health_url', # исправить опечатку везде!
-            'smartphone_gadgets_url',
-            'tablet_book_url',
-            'TB_accessories_url',
-            'audio_url',
-            'computer_notebook_url',
-            'PC_accessories_url'
-        )
-
     def get(self, request, url):
-        url = url
-        submenu = SubMenu.objects.all()
-        if url in self.URL_LIST:
-            menu = Menu.objects.get(url=url)
-        else:
-            return redirect('main_menu_url')
 
-        return render(request, 'shop/submenu_menu.html', {'menu': menu, 'submenu': submenu})
+        menu = get_object_or_404(Menu, url=url)
+        submenu = get_list_or_404(SubMenu, category=menu.id)
+
+        return render(request, 'shop/submenu_menu.html', {'menu': submenu})
 
 
 class CartView(View):

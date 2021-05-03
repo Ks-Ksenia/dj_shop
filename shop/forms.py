@@ -138,7 +138,9 @@ class MicrowaveOvenForm(FormMixin, forms.Form):
 
 
 class KettleForm(FormMixin, forms.Form):
-    BODY_MATERIAL = (('нержавеющая сталь', 'нержавеющая сталь'), ('пластик', 'пластик'), ('термостойкое стекло', 'термостойкое стекло'))
+    BODY_MATERIAL = (('нержавеющая сталь', 'нержавеющая сталь'),
+                     ('пластик', 'пластик'),
+                     ('термостойкое стекло', 'термостойкое стекло'))
 
     body_material = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple,
         label='Материал корпуса', required=False, choices=BODY_MATERIAL)
@@ -181,7 +183,8 @@ class HairdryerForm(FormMixin, forms.Form):
 class HairClipperForm(FormMixin, forms.Form):
     TYPE_ENGINE = (('вибрационный', 'вибрационный'), ('роторный', 'роторный'))
 
-    FOOD = (('от сети', 'от сети'), ('от сети/аккумулятора', 'от сети/аккумулятора'), ('от аккумулятора', 'от аккумулятора'))
+    FOOD = (('от сети', 'от сети'),
+            ('от сети/аккумулятора', 'от сети/аккумулятора'), ('от аккумулятора', 'от аккумулятора'))
 
     type_engine = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple,
         label='Тип двигателя', required=False, choices=TYPE_ENGINE)
@@ -192,10 +195,10 @@ class HairClipperForm(FormMixin, forms.Form):
 
 class SmartphoneForm(FormMixin, forms.Form):
     AMOUNT_RAM = (('16 Гб', '16 Гб'), ('32 Гб', '32 Гб'),
-                              ('64 Гб', '64 Гб'), ('128 Гб', '128 Гб'), ('256 Гб', '256 Гб'), ('512 Гб', '512 Гб'))
+                  ('64 Гб', '64 Гб'), ('128 Гб', '128 Гб'), ('256 Гб', '256 Гб'), ('512 Гб', '512 Гб'))
 
     AMOUNT_INTERNAL_MEMORY = (('1 Гб', '1 Гб'), ('2 Гб', '2 Гб'),
-                  ('3 Гб', '3 Гб'), ('4 Гб', '4 Гб'), ('6 Гб', '6 Гб'), ('8 Гб', '8 Гб'))
+                              ('3 Гб', '3 Гб'), ('4 Гб', '4 Гб'), ('6 Гб', '6 Гб'), ('8 Гб', '8 Гб'))
 
     amount_RAM = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple,
         label='Объём оперативной памяти', required=False, choices=AMOUNT_INTERNAL_MEMORY)
@@ -273,8 +276,8 @@ class NotebookForm(FormMixin, forms.Form):
 
 class SystemUnitForm(FormMixin, forms.Form):
 
-    SISTEM = (('Windows 10 Домашняя', 'Windows 10 Домашняя'), ('Windows 10 Pro', 'Windows 10 Pro'), ('без ОС', 'без ОС'),
-              ('Linux', 'Linux'))
+    SISTEM = (('Windows 10 Домашняя', 'Windows 10 Домашняя'), ('Windows 10 Pro', 'Windows 10 Pro'),
+              ('без ОС', 'без ОС'), ('Linux', 'Linux'))
     RAM = (('DDR4', 'DDR4'), ('DDR3', 'DDR3'))
 
     OS = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple,

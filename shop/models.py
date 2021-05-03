@@ -69,7 +69,6 @@ class Review(models.Model):
     text = models.TextField('Отзыв', max_length=10000)
     date = models.DateTimeField('Дата создания', default=datetime.now)
     quantity = models.PositiveIntegerField('Кол-во отзывов', default=0)
-# создать заново и убрать null=True
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, null=True)
     object_id = models.PositiveIntegerField(null=True)
     content_object = GenericForeignKey('content_type', 'object_id')
@@ -97,7 +96,6 @@ class MainMenu(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        # self.model_name = self.__class__.__name__.lower()
         return reverse('menu_url', kwargs={'url': self.url})
 
 
@@ -126,7 +124,6 @@ class SubMenu(models.Model):
     url = models.SlugField('url', unique=True)
     image = models.ImageField('Изображение')
     model = models.CharField('Имя модели продукта', max_length=300, blank=True, null=True, default='none')
-
 
     class Meta:
         verbose_name = 'Подменю'
@@ -191,7 +188,6 @@ class CartProduct(models.Model):
     final_price = models.PositiveIntegerField(verbose_name='Общая цена', default=0)
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()
-# параметры можно не писать, они по умолчанию content_type и object_id
     content_object = GenericForeignKey('content_type', 'object_id')
 
     class Meta:
@@ -227,16 +223,18 @@ class Order(models.Model):
         (BUYING_TYPE_SELF, 'Самовывоз'),
         (BUYING_TYPE_DELIVERY, 'Доставка')
     )
-# убрать у cart null=True, blank=True
+
     cart = models.ForeignKey(Cart, verbose_name='Корзина', on_delete=models.CASCADE, null=True, blank=True)
-    customer = models.ForeignKey(Customer, verbose_name='Покупатель', on_delete=models.CASCADE, related_name='related_order')
+    customer = models.ForeignKey(Customer, verbose_name='Покупатель',
+                                 on_delete=models.CASCADE, related_name='related_order')
     first_name = models.CharField('Имя', max_length=100)
     last_name = models.CharField('Фамилия', max_length=150)
     phone = models.CharField('Телефон', max_length=20)
     email = models.EmailField('email', max_length=50)
     address = models.TextField('Адрес доставки', max_length=1024, blank=True, null=True)
     status = models.CharField('Статус заказа', max_length=100, choices=STATUS_CHOICES, default=STATUS_NEW)
-    buying_type = models.CharField('Тип доставки', max_length=100, choices=BUYING_TYPE_CHOICES, default=BUYING_TYPE_SELF)
+    buying_type = models.CharField('Тип доставки', max_length=100,
+                                   choices=BUYING_TYPE_CHOICES, default=BUYING_TYPE_SELF)
     number = models.CharField('Номер заказа', max_length=10, unique=True)
     created_at = models.DateTimeField('Дата создание заказа', auto_now=True)
     products_for_order = models.TextField('Продукт(ы) в корзине', default='')
@@ -372,8 +370,6 @@ class Stove(models.Model):
         self.category = self.__class__.__name__.lower()
         return reverse('stove_product_url', kwargs={'url': self.url, 'category': self.category})
 
-    def get_model_name(self):
-        return self.__class__._meta.model_name
 
 
 class MicrowaveOven(models.Model):
@@ -434,8 +430,6 @@ class MicrowaveOven(models.Model):
         self.category = self.__class__.__name__.lower()
         return reverse('microwave_oven_product_url', kwargs={'url': self.url, 'category': self.category})
 
-    def get_model_name(self):
-        return self.__class__._meta.model_name
 
 
 class Kettle(models.Model):
@@ -489,8 +483,6 @@ class Kettle(models.Model):
         self.category = self.__class__.__name__.lower()
         return reverse('kettle_product_url', kwargs={'url': self.url, 'category': self.category})
 
-    def get_model_name(self):
-        return self.__class__._meta.model_name
 
 
 class WashMachine(models.Model):
@@ -1130,7 +1122,8 @@ class BracketTV(models.Model):
 
 # совместимость
     max_load = models.CharField("Мах нагрузка", max_length=100, default='25 кг')
-    standard_mounting_dimension = models.CharField("Стандарт размеров крипления", max_length=100, default='100 x 100, 75 x 75')
+    standard_mounting_dimension = models.CharField("Стандарт размеров крипления",
+                                                   max_length=100, default='100 x 100, 75 x 75')
     max_diagonal_screen = models.CharField("Мин диагональ экрана", max_length=100, default='10"')
     min_diagonal_screen = models.CharField("Мах диагональ экрана", max_length=100, default='26"')
 
@@ -1667,6 +1660,5 @@ class RAMMemory(models.Model):
 def get_verbouse_field_name(self):
     return self._meta.get_field
 
-def get_model_name(self):
-    return self.__class__._meta.model_name
+
 
