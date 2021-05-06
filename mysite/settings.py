@@ -84,18 +84,20 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-#
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd5kbqtmu3n5plq',
-#         'PASSWORD': '05b0de9cdc2c323b0564107e68a29a64f75e32c70df93b97406c9de3ff7ae4ee',
-#         'HOST': 'ec2-3-91-127-228.compute-1.amazonaws.com',
-#         'PORT': '5432'
-#     }
-# }
-#
-# DATABASE_URL = 'postgres://pgiyeiyhyaobw:05b0de9cdc2c323b0564107e68a29a64f75e32c70df93b97406c9de3ff7ae4ee@ec2-3-91-127-228.compute-1.amazonaws.com:5432/d5kbqtmu3n5plq'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd5kbqtmu3n5plq',
+        'PASSWORD': '05b0de9cdc2c323b0564107e68a29a64f75e32c70df93b97406c9de3ff7ae4ee',
+        'HOST': 'ec2-3-91-127-228.compute-1.amazonaws.com',
+        'PORT': '5432'
+    }
+}
+
+DATABASE_URL = 'postgres://pgiyeiyhyaobw:05b0de9cdc2c323b0564107e68a29a64f75e32c70df93b97406c9de3ff7ae4ee@ec2-3-91-127-228.compute-1.amazonaws.com:5432/d5kbqtmu3n5plq'
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

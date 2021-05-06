@@ -1077,6 +1077,8 @@ input[type=number] {
 }
 
 .hidden_topmenu{
+    margin: 5px 0 15px 3%;
+    width: 103%;
     visibility: hidden;
 }
 
@@ -1094,11 +1096,6 @@ input[type=number] {
     visibility: visible;
 }
 
-
-.hidden_topmenu{
-    margin: 5px 0 15px 3%;
-    width: 103%;
-}
 
 .hidden_topmenu > a{
     display: flex;
